@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Atividades</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descricao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @atividades.each do |atividade| %>
+      <tr>
+        <td><%= atividade.titulo %></td>
+        <td><%= atividade.descricao %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

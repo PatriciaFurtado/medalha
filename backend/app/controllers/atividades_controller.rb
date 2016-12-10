@@ -7,6 +7,10 @@ class AtividadesController < ApplicationController
     @atividades = Atividade.all
   end
 
+  def visualizar
+    @atividades = Atividade.all
+  end
+
   # GET /atividades/1
   # GET /atividades/1.json
   def show
