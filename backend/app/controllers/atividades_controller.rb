@@ -8,7 +8,7 @@ class AtividadesController < ApplicationController
   end
 
   def visualizar
-    @atividades = Atividade.usuarios.select(:nome).distinct
+    @atividades = Atividade.distinct(:titulo)
   end
 
   # GET /atividades/1
