@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+
   resources :medalhas
+  root to: "atividades#visualizar"
   resources :usuarios
   resources :atividades
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
