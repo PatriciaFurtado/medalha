@@ -8,8 +8,7 @@ class AtividadesController < ApplicationController
   end
 
   def visualizar
-    #@atividades = Atividade.usuarios.group_by(&:nome)
-    @atividades = Atividade.usuarios.group(:nome).count
+    @atividades = Atividade.usuarios.select(:nome).distinct
   end
 
   # GET /atividades/1

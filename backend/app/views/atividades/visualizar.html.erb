@@ -5,20 +5,19 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Titulo</th>
+      <th>Atividade</th>
       <th>Usuário</th>
+      <th>Pontos</th>
     </tr>
   </thead>
 
   <tbody>
     <% @atividades.each do |atividade| %>
-      <% atividade.usuarios.each do |usuario| %>
         <tr>
           <td><%= atividade.titulo %></td>
-          <td><%= usuario.nome %></td>
-          
+          <td><%= atividade.usuarios.select(:nome).distinct[0].nome if atividade.usuarios.any? %></td>
+          <td><%= atividade.usuarios.select(:nome).count if atividade.usuarios.any? %></td>
         </tr>
-      <% end %>
     <% end %>
   </tbody>
 </table>
