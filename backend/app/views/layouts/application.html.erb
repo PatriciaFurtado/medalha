@@ -17,7 +17,7 @@
       <p class="alert"><%= alert %></p>
       <p><%= current_user.email if user_signed_in? %></p>
       <div class="row">
-        <div class="col-xs-2">
+        <div class="col-xs-2" id="sidebar">
           <ul>
             <li><%= link_to 'Principal', "/" %></li>
             <li><%= link_to 'Usuários', controller: "usuarios", action:"index"%></li>
