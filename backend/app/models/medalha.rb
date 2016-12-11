@@ -1,0 +1,2 @@
+class Medalha < ApplicationRecord
+end

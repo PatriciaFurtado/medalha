@@ -1,0 +1,2 @@
+module MedalhasHelper
+end

@@ -1,0 +1,1 @@
+json.array! @medalhas, partial: 'medalhas/medalha', as: :medalha
